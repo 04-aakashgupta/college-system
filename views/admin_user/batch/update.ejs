@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Batch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+
+<body style="height: 100vh;">
+
+    <div class="container h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <div class="cart-title h3 text-center">
+                        Update Batch
+                    </div>
+                    <div class="cart-body">
+                        <form action="/admin-user/batch/update-request" method="post">
+                            <label>Batch ID</label>
+                            <input type="text" name="batch_id" id="batch_id" class="form-control mb-3">
+
+                            <label>Batch Name</label>
+                            <input type="text" name="batch_name" id="batch_name" class="form-control mb-3">
+
+
+
+
+                            <label>Select Course Name</label>
+                            <!--  <input type="text" name="course_name" id="course_name" class="form-control mb-3"> -->
+
+                            <select name="course_name" id="course_name" class="form-select">
+
+
+
+
+
+                                <% result.map((elem,index)=>
+                                    {
+                                    %>
+                                    <option>
+                                        <%= elem.course_name %>
+                                    </option>
+                                    <% } ) %>
+
+
+
+                            </select>
+
+                            <label> Batch Start Date </label>
+                            <input type="date" name="batch_start_date" id="batch_start_date" class="form-control  mb-3">
+                            <label> Batch End Date </label>
+                            <input type="date" name="batch_end_date" id="batch_end_date" class="form-control  mb-4">
+                            <div class="d-grid ">
+                                <input type="submit" value="Update" name="batch_update" id="batch_update"
+                                    class="btn btn-primary fw-bold fs-5">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

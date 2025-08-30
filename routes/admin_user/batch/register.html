@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacth Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+</head>
+
+<body style="height:100vh">
+
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="  col col-md-4">
+                <div class="card shadow p-4 ">
+                    <div class="card-title h4 text-center fw-bold">Batch Registration</div>
+                    <div class="card-body">
+
+                        <form action="/admin-user/batch/register-request" method="post">
+                            <label>Batch Name</label>
+                            <input type="text" name="batch_name" id="batch_name" class="form-control mb-3">
+                        
+                             <label>Course Name</label>
+                            <input type="text" name="course_name" id="course_name" class="form-control mb-3">
+                            <label>Batch Start Date</label>
+                            <input type="date" name="batch_start_date" id="batch_start_date" class="form-control  mb-3">
+                            <label>Batch End Date</label>
+                            <input type="date" name="batch_end_date" id="batch_end_date" class="form-control mb-3">
+                            <div class="d-grid  pt-4">
+                                <input type="submit" name="register" id="register" class="btn btn-primary ">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
