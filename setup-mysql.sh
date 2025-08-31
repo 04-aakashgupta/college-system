@@ -1,5 +1,6 @@
 #!/bin/bash
 # === Configuration ===
+
 DB_NAME="college"
 DB_USER="root"
 DB_PASS="root"
